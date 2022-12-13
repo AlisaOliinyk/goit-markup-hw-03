@@ -25,6 +25,11 @@ body {
     outline: 2px solid tomato;
 }
 
+.h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+
 /* Header */
  /* <!-- Logo -- > */
  
@@ -49,7 +54,9 @@ body {
  }
 
  ul {
-        list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+      list-style-type: none;
     }
 
  .site-nav .link {
@@ -103,9 +110,17 @@ body {
 /* main */
 /* hero section */
 
+.conteiner-hero {
+    text-align: center;
+     outline: 2px solid tomato;
+}
+
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 30px;
     color: #FFFFFF;
     background: #2F303A;
+    padding: 452px 200px 452px 280px;
         font-weight: 900;
         font-size: 44px;
         line-height: 1.364;
@@ -113,7 +128,9 @@ body {
         letter-spacing: 0.06em;
         text-transform: uppercase;
     }
-.button-primary {
+.button-primary {  
+    margin-top: 0;
+    display: inline-block;
     color: #FFFFFF;
     background: var(--accent-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -124,6 +141,7 @@ body {
             font-size: 16px;
             line-height: 1.875;
             cursor: pointer;
+            
 }
 
 /* section about us */
