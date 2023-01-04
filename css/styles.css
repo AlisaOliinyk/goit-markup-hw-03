@@ -26,7 +26,7 @@ body {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 2px solid tomato;
+    *outline: 2px solid tomato;
 
 }
 
@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6, p {
     list-style: none;
     padding-left: 0;
     margin: 0;
+   
 }
 
 .link {
@@ -60,6 +61,27 @@ address {
 /* Header */
  /* <!-- Logo -- > */
 
+ .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    border: 1px solid #ECECEC;
+
+ }
+
+ .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+ }
+
+ .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+ }
 
  
 .logo {
@@ -87,21 +109,27 @@ address {
       margin: 0;
       list-style-type: none;
     }
+ 
+ .header-menu {
+    display: flex;
+    gap: 50px;
+ }
 
- .site-nav .link {
+ .header-menu .link {
     color: var(--accent-color);
     text-decoration: none;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.143;
         letter-spacing: 0.02em;
+        
  }
- .site-nav .link:hover,
- .site-nav .link:focus {
+ .header-menu .link:hover,
+ .header-menu .link:focus {
     color: #000000;
  }
 
- .site-nav .item {
+ .header-menu .item {
     color: var(--primary-text-color);
         font-weight: 500;
         font-size: 14px;
@@ -109,7 +137,14 @@ address {
         letter-spacing: 0.02em;
     text-decoration: none;
 }
-.auth-nav .contact {
+
+.header-contact {
+    display: flex;
+    gap: 40px;
+    margin-left: 354px;
+}
+
+.header-contact .contact {
     color: var(--accent-color);
         font-weight: 500;
         font-size: 14px;
@@ -118,12 +153,12 @@ address {
     text-decoration: none;
 }
 
-.auth-nav .contact:hover,
-.auth-nav .contact:focus {
+.header-contact .contact:hover,
+.header-contact .contact:focus {
     color: #000000;
 }
  
-.auth-nav .contact-icon {
+.header-contact .contact-icon {
     color: var(--title-text-color);
         font-weight: 500;
         font-size: 14px;
@@ -132,14 +167,16 @@ address {
         text-decoration: none;  
 }
 
-.auth-nav .contact-icon:hover,
-.auth-nav .contact-icon:focus {
+.header-contact .contact-icon:hover,
+.header-contact .contact-icon:focus {
      color: #000000;
 }
 /* main */
 /* hero section */
 
 .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background: #2F303A;
     text-align: center; 
 }
@@ -157,7 +194,9 @@ address {
         text-transform: uppercase;
     }
 
-.button-primary {  
+.button-primary { 
+    width: 200px;
+    height: 50px;
     margin: 0 auto;
     display: block;
     color: #FFFFFF;
@@ -170,13 +209,20 @@ address {
             font-size: 16px;
             line-height: 1.875;
             cursor: pointer;
+            letter-spacing: 0.06em;
             
 }
 
 /* section about us */
+
+.section-activity {
+    padding-top: 94px;
+}
+
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
+    
 }
 
 .section-title {
@@ -190,6 +236,7 @@ address {
 }
 
 .section-text {
+    Width: 270px;
     color: var(--title-text-color);
         font-size: 14px;
         line-height: 1.714;
@@ -206,15 +253,16 @@ address {
 .item {
     width: calc((100%-90px)/4);
     margin-right: 30px;
-    margin-bottom: 30px;
 }
 
-.item:nth-last-child(-n+3) {
-    margin-right: 0;
+.item:last-child {
+    margin-right: 0px;
 }
 
 
 /* what we do */
+
+
 
 .title-section {
     margin-bottom: 50px;
@@ -233,7 +281,6 @@ address {
 .flex-images {
     width: calc((100%-60px)/3);
         margin-right: 30px;
-        margin-bottom: 30px;
 }
 
     /* our team */
@@ -283,7 +330,6 @@ address {
     .list-team {
        width: calc((100%-90px)/4);
         margin-right: 30px;
-        margin-bottom: 30px;
         background-color: #FFFFFF;
         border-radius: 0px 0px 4px 4px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -293,15 +339,41 @@ address {
    
  
     /* footer */
+
+ .logo-footer {
+    margin-bottom: 28px;
+    color: #000000;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+}
+
  .logo-studio-footer {
     color: #ffffff;
  }
-
+ 
+ 
+ 
+ 
  .footer {
+    *padding-top: 60px;
+    *padding-bottom: 60px;
     background-color: #2F303A;
+ }
+ 
+ .container-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
  }
 
  .footer-contact {
+    width: 207px;
+    margin-top: 28px;
     color: #FFFFFF;
     font-family: 'Roboto';
         font-style: normal;
@@ -312,6 +384,8 @@ address {
 }
 
 .footer-contact-email {
+    width: 231px;
+    margin-bottom: 12px;
     color: rgba(255, 255, 255, 0.6);
     font-family: 'Roboto';
         font-style: normal;
@@ -322,6 +396,7 @@ address {
 }
 
 .footer-contact-phone {
+    width: 231px;
     color: rgba(255, 255, 255, 0.6);
     font-family: 'Roboto';
         font-style: normal;
@@ -403,9 +478,7 @@ address {
 }
 
 .flex-list {
-    width: calc((100%-90px)/4);
-        margin-right: 30px;
-        margin-bottom: 30px;
+    width: calc((100% - 60px)/3);
 
    
 }
