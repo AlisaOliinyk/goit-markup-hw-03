@@ -138,6 +138,11 @@ address {
     text-decoration: none;
 }
 
+ .header-menu .item:hover,
+ .header-menu .item:focus {
+   color: var(--accent-color);
+ }
+
 .header-contact {
     display: flex;
     gap: 40px;
@@ -340,7 +345,8 @@ address {
  
     /* footer */
 
- .logo-footer {
+ .logo-footer { 
+    display: block;
     margin-bottom: 28px;
     color: #000000;
     font-family: 'Raleway';
@@ -356,12 +362,12 @@ address {
     color: #ffffff;
  }
  
- 
+ .address {
+    display: block;
+ }
  
  
  .footer {
-    *padding-top: 60px;
-    *padding-bottom: 60px;
     background-color: #2F303A;
  }
  
@@ -372,8 +378,10 @@ address {
  }
 
  .footer-contact {
+    display: block;
     width: 207px;
     margin-top: 28px;
+    margin-bottom: 12px;
     color: #FFFFFF;
     font-family: 'Roboto';
         font-style: normal;
@@ -384,6 +392,7 @@ address {
 }
 
 .footer-contact-email {
+    display: block;
     width: 231px;
     margin-bottom: 12px;
     color: rgba(255, 255, 255, 0.6);
@@ -396,6 +405,7 @@ address {
 }
 
 .footer-contact-phone {
+    display: block;
     width: 231px;
     color: rgba(255, 255, 255, 0.6);
     font-family: 'Roboto';
@@ -417,8 +427,11 @@ address {
 
 /* portfolio */
  .button-portfolio .button {
+    width: 125px;
+    padding: 6px 22px;
+    margin-bottom: 50px;
     color: var(--primary-text-color);
-     background: #F5F4FA;
+     /* background: #F5F4FA; */
     font-family: 'Roboto';
         font-style: normal;
         font-weight: 500;
@@ -433,8 +446,10 @@ address {
  }
 
 .button-primary-portfolio {
-    display: inline-flex;
-    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    width: 67px;
+    padding: 6px 22px;
     color: #ffffff;
     background: #2196F3;
     font-family: 'Roboto';
@@ -447,12 +462,13 @@ address {
         border-radius: 4px;
         border: none;
         cursor: pointer;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 
 }
 
  .button-portfolio {
-    display: inline-flex;
-        margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
         gap: 8px;
         color: #ffffff;
         background: #F5F4FA;
@@ -472,14 +488,15 @@ address {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
+    background: #F5F5F5;
+   
     
 }
 
 .flex-list {
     width: calc((100% - 60px)/3);
-
+    border: 1px solid #EEEEEE;
+    background: #FFFFFF;
    
 }
 
@@ -489,6 +506,7 @@ address {
 
 
 .list-portfolio-title {
+    padding: 20px 24px 4px 24px;
     color: var(--primary-text-color);
         font-weight: 700;
         font-size: 18px;
@@ -498,6 +516,7 @@ address {
     }
 
  .list-portfolio-text {
+    padding: 4px 24px 20px 24px;
     color: var(--title-text-color);
         line-height: 1.875;
       letter-spacing: 0.03em;
